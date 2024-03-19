@@ -1,0 +1,579 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    padding: 25px 100px;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    transition: color 0.3s;
+    z-index: 2000;
+}
+
+#nav-menu #burger-icon {
+    display: none;
+    color: black;
+}
+
+.light-header {
+    color: white;
+}
+
+.dark-header {
+    color: black;
+}
+
+nav ul {
+    display: flex;
+    gap: 50px;
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: green;
+}
+
+#nav-menu,
+#logo a {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    z-index: 2000;
+}
+
+#logo a {
+    font-family: "Yeseva One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+/* Main content */
+#main {
+    margin: 0 100px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 100vh;
+    padding-top: 100px;
+}
+
+.headline {
+    padding-top: 25%;
+}
+
+.headline .name {
+    font-family: "Yeseva One", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12rem;
+    line-height: 75%;
+}
+
+#filler {
+    margin-top: 20%;
+    background-image: url(/assets/leaves.jpg);
+    z-index: -1;
+}
+
+.job {
+    font-size: 3rem;
+    font-style: italic;
+}
+
+#subtitle {
+    margin-top: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.2rem;
+}
+
+#download-cv {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    margin: 20%;
+    margin-top: 50px;
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 17px 20px;
+    font-size: 1.2rem;
+    background-color: rgb(20, 27, 21);
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/* About section */
+#about {
+    background-color: rgb(20, 27, 21);
+    min-height: 100vh;
+    max-height: fit-content;
+    color: whitesmoke;
+    padding: 0 100px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding-top: 200px;
+}
+
+#about-content {
+    font-family: "Josefin Sans", sans-serif;
+    margin-top: 35px;
+}
+
+#about-content #about-me {
+    font-size: 30px;
+    text-indent: 50px;
+    text-align: justify;
+    margin-bottom: 80px;
+    font-family:'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
+
+#about-content ul li span {
+    display: block;
+}
+
+#about-content ul li {
+    margin-bottom: 60px;
+}
+
+#about-content h1 {
+    font-size: 50px;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+#about-content ul {
+    font-family:'Times New Roman', Times, serif;
+    margin-bottom: 80px;
+}
+
+#about-content ul span {
+    margin-bottom: 12px;
+}
+
+.head-1 {
+    font-size: 30px;
+}
+
+.course {
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.period {
+    font-size: 15px;
+}
+
+#skills {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    background-color: rgba(255, 255, 255, 0.034);
+    border-radius: 25px;
+}
+
+#skills img {
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#skills div {
+    position: relative;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+}
+
+#skills .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1000;
+    top: 100%;
+    left: 20%;
+}
+
+#skills div:hover .tooltip-text {
+    visibility: visible;
+}
+
+#skills .tooltip-text::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+}
+
+/* Projects section */
+#projects {
+    height: fit-content;
+    min-height: 100vh;
+    padding: 0 100px 200px 100px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding-top: 200px;
+}
+
+.project-container {
+    background-color: rgb(241, 201, 147);
+    padding: 20px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 15px 20px 17px -5px rgba(241,201,147,0.76);
+    -webkit-box-shadow: 15px 20px 17px -5px rgba(241,201,147,0.76);
+    -moz-box-shadow: 15px 20px 17px -5px rgba(241,201,147,0.76);
+}
+
+.img-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.project-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 30px;
+    text-align: center;
+}
+
+.img-wrapper:hover img {
+    filter: brightness(20%); 
+    transition: 0.3s;
+}
+
+.img-wrapper:hover .project-title {
+    opacity: 1; 
+}
+
+.img-wrapper img {
+    width: 100%;
+    align-self: center;
+    border-radius: 20px;
+}
+
+.panel {
+    margin-top: 20px;
+    padding: 20px;
+    overflow: hidden;
+    display: none;
+}
+
+.project-name {
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.panel p {
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.source-code-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(20, 27, 21);
+    color: #fff;
+    margin-top: 30px;
+    border: none;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    row-gap: 100px;
+}
+
+/* Contact section */
+#contact {
+    background-color: rgb(20, 27, 21);
+    height: fit-content;
+    color: white;
+    padding: 0 100px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.social-links {
+    background-color: antiquewhite;
+    max-width: 520px;
+    height: fit-content;
+    padding: 50px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.social-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#social-header {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.social-account a img {
+    width: 200px;
+}
+
+/* Global */
+
+.section-name {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 7em;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    position: sticky;
+    top: 200px;
+    margin-bottom: 200px;
+}
+
+.display-menu {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+}
+
+@media screen and (max-width: 1500px) {
+    .headline .name {
+        font-weight: 500;
+        font-style: normal;
+        font-size: 7rem;
+        line-height: 75%;
+    }   
+    
+    .job {
+        font-size: 2rem;
+        font-style: italic;
+    }
+    
+    #subtitle {
+        margin-top: 20px;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .headline .name {
+        font-weight: 500;
+        font-style: normal;
+        font-size: 5rem;
+        line-height: 75%;
+    }   
+    
+    .job {
+        font-size: 1.4rem;
+        font-style: italic;
+    }
+    
+    #subtitle {
+        margin-top: 20px;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 0.9rem;
+    }
+
+    #download-cv {
+        font-size: 1rem;
+    }
+
+    #main {
+        margin: 0 50px;
+    }
+
+    header {
+        font-size: 20px;
+        padding: 25px 50px;
+    } 
+
+    #about {
+        min-height: 100vh;
+        max-height: fit-content;
+        color: whitesmoke;
+        padding: 0 50px;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        padding-top: 200px;
+    }
+
+    #about-content h1 {
+        font-size: 38px;
+    }
+
+    #about-content #about-me {
+        font-size: 24px;
+    }
+
+    .head-1 {
+        font-size: 24px;
+    }
+    
+    .course {
+        font-style: italic;
+        font-size: 18px;
+        font-weight: 300;
+    }
+    
+    .period {
+        font-size: 14px;
+    }
+
+    #projects {
+        padding: 200px 50px 200px 50px;
+    }
+
+    .project-container {
+        background-color: rgb(241, 201, 147);
+        padding: 20px;
+        width: 400px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .social-account a img {
+        width: 150px;
+    }
+
+    #contact {
+        padding: 200px 50px 30px 50px;
+    }
+
+    .section-name {
+        margin-bottom: 10px;
+    }
+
+    #skills {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 600px) { 
+
+    #download-cv {
+        font-size: 0.8rem;
+        margin: 50px;
+    }
+    
+    #nav-menu .initial-state {
+        display: none;
+    }
+
+    #nav-menu #burger-icon {
+      display: block;
+      z-index: 1500;
+    }
+
+    #nav-menu ul {
+        flex-direction: column;
+        background-color: black;
+        width: 125px;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    #nav-menu ul li a {
+        color: white;
+    }
+
+    #about {
+        grid-template-columns: auto;
+    }
+
+    #projects {
+        grid-template-columns: auto;
+    }
+
+    #contact {
+        grid-template-columns: auto;
+    }
+
+    .section-name {
+        writing-mode:horizontal-tb;
+        transform: rotate(0deg);
+        font-size: 5rem;
+        text-align: center;
+    }
+
+    .social-account a img {
+        width: 120px;
+    }
+
+    #main {
+        grid-template-columns: auto;
+    }
+
+    #filler {
+        margin-top: 0;
+    }
+
+    .headline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #skills img {
+        width: 50px;
+    }
+
+    #skills {
+        gap: 10px;
+    }
+
+    #skills div {
+        width: 10px;
+        height: 120px;
+    }
+}
